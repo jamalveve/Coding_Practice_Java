@@ -1,0 +1,54 @@
+1. Write a Java program to display the following pattern. 
+Sample Pattern :
+
+   J    a   v     v  a                                                  
+   J   a a   v   v  a a                                                 
+J  J  aaaaa   V V  aaaaa                                                
+ JJ  a     a   V  a     a
+ 
+   2.// Calculate and print the average of the five numbers
+ 
+  System.out.println("Average of five numbers is: " + (num1 + num2 + num3 + num4 + num5) / 5);
+ 
+ 3.
+ * * * * * * ==================================                          
+ * * * * *  ==================================                          
+* * * * * * ==================================                          
+ * * * * *  ==================================                          
+* * * * * * ==================================                          
+ * * * * *  ==================================                          
+* * * * * * ==================================                          
+ * * * * *  ==================================                          
+* * * * * * ==================================                          
+==============================================                          
+==============================================                          
+==============================================                          
+==============================================                          
+==============================================                          
+==============================================
+
+16. Write a Java program to print a face. 
+Expected Output
+
+ +"""""+                                                 
+[| o o |]                                                
+ |  ^  |                                                 
+ | '-' |                                                 
+ +-----+
+Click me to see th
+
+
+add two binary numbers:
+multiply two binary numbers:
+ Write a Java program to convert an integer number to a binary number. 
+ Write a Java program to convert a decimal number to a hexadecimal number. 
+. Write a Java program to convert a decimal number to an octal number. 
+Write a Java program to convert a binary number to a decimal number. 
+23. Write a Java program to convert a binary number to a hexadecimal number. 
+24. Write a Java program to convert a binary number to an octal number. 
+25. Write a Java program to convert a octal number to a decimal number. 
+26. Write a Java program to convert a octal number to a binary number. 
+27. Write a Java program to convert a octal number to a hexadecimal number. 
+28. Write a Java program to convert a hexadecimal value into a decimal number. 
+29. Write a Java program to convert a hexadecimal number into a binary number. 
+30. Write a Java program to convert a hexadecimal value into an octal number. 

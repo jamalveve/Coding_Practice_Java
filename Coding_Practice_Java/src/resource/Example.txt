@@ -1,0 +1,3 @@
+Scanner sc1 = new Scanner(System.in);
+	System.out.println("enter number: ");
+	int number = sc1.nextInt();
