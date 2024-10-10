@@ -1,0 +1,6 @@
+How to handle null pointer exception in java 8?
+1. Understand Null Pointer Exception
+A Null Pointer Exception occurs when an application attempts to use an object reference that has not been initialized, meaning it is null
+
+. Use of Optional Class
+Java 8 introduced the Optional class to provide a more streamlined approach for dealing with nullable values. The `Optional` class helps to avoid null checks by allowing the code to express the absence of a value explicitly. For example, developers can define a method that returns an Optional, which forces the caller to handle the case when the value is absent.

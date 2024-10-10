@@ -1,0 +1,87 @@
+1)How to read the key value for app.properties in SB?
+Example: using @Value
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyAppProperties {
+
+    @Value("${app.name}")
+    private String appName;
+
+    @Value("${app.version}")
+    private String appVersion;
+
+    public void printProperties() {
+        System.out.println("App Name: " + appName);
+        System.out.println("App Version: " + appVersion);
+    }
+}
+
+# application.properties
+app.name=My Spring Boot Application
+app.version=1.0.0
+app.description=This is a sample Spring Boot application.
+
+
+2)In Spring Boot, a request filter is a powerful component that allows developers to intercept and manipulate HTTP requests and responses before they reach the application’s controllers. Filters can perform a range of operations, including logging, authentication, and response caching, contributing to cleaner and more maintainable code.
+->ensuring a robust and flexible handling of HTTP requests and responses.
+
+@Filter,@WebFilter 
+
+
+3)can we change server in springboot?
+
+
+yes, you can change the server in a Spring Boot application by configuring it in a few different ways.
+ By default, Spring Boot uses an embedded Tomcat server. 
+ However, you can switch to a different embedded server like Jetty or Undertow, or configure external servers.
+ 
+ 
+ <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+    <exclusions>
+        <exclusion>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-jetty</artifactId> //here
+</dependency>
+
+
+4)scope of beans
+what is beans
+all controller,sevoce,reposoitory are beans
+1. Singleton Scope
+The singleton scope is the default bean scope in Spring, where only one instance of the bean is created per Spring IoC (Inversion of Control) container. This single instance is shared across the entire application and can be accessed by all components needing it
+ 
+ 
+ 2. Prototype Scope
+In prototype scope, a new instance of the bean is created each time it is requested from the Spring container. Unlike singleton beans, Spring does not manage the complete lifecycle of a prototype bean, meaning that developers are responsible for handling its destruction and cleanup
+
+
+5)@RequestParam?
+@GetMapping("/search")
+public ResponseEntity<String> searchUsers(
+    @RequestParam(value = "name") String userName,
+    @RequestParam(value = "age") int userAge
+) {
+    // Logic using userName and userAge
+}
+@RequestParam(value = "name"): This indicates that the method parameter userName should be populated from the request parameter named name.
+@RequestParam(value = "age"): Similarly, this indicates that userAge should derive its value from the request parameter called age.
+
+When a client sends a request to the endpoint (e.g., GET /api/users/search?name=John&age=30), Spring will automatically extract:
+The name parameter from the query string and assign its value ("John") to the userName parameter.
+The age parameter and assign its value (30) to the userAge parameter.
+
+
+6)@Path variable? and @RequestBody
+
+check product Contller classss 
